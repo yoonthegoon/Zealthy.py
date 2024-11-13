@@ -7,7 +7,7 @@ from .models import OnboardingUser, Page
 class OnboardingUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = OnboardingUser
-        exclude = ["user"]
+        fields = "__all__"
 
 
 class PageSerializer(serializers.HyperlinkedModelSerializer):
@@ -19,4 +19,4 @@ class PageSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        exclude = ["password", "user_permissions"]
+        fields = ["id", "username", "email", "url"]

@@ -7,17 +7,17 @@ from .serializers import OnboardingUserSerializer, PageSerializer, UserSerialize
 
 class OnboardingUserViewSet(viewsets.ModelViewSet):
     queryset = OnboardingUser.objects.all()
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = OnboardingUserSerializer
 
 
 class PageViewSet(viewsets.ModelViewSet):
     queryset = Page.objects.all()
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = PageSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = UserSerializer
